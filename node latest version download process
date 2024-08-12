@@ -1,0 +1,8 @@
+node latest version download process 
+sudo apt-get remove nodejs
+sudo rm /etc/apt/sources.list.d/nodesource.list
+sudo apt-get update
+curl -fsSL https://deb.nodesource.com/setup_current.x | sudo -E bash -
+sudo apt-get install -y nodejs
+node -v
+curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
