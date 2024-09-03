@@ -1,0 +1,42 @@
+show automatically order tags in order admin
+
+show total product hanle in tags in order 
+{% for li in order.lineItems %}{{ li.product.handle }},{% endfor %}
+
+show total product title in tags in order 
+{% for li in order.lineItems %}{{ li.product.title }}-{{ li.variantTitle }},{% endfor %}
+
+show total quantity in single order
+{{order.currentSubtotalLineItemsQuantity}}
+
+
+
+other
+{% for lineItems_item in order.lineItems %} {{ lineItems_item.product.vendor }} {%endfor%}
+
+{{ order.lineItems.title }}
+
+title
+
+{% for lineItems_item in order.lineItems %} {{ lineItems_item.product.vendor }} {%endfor%}
+
+{% for lineItems_item in order.lineItems %} {{ lineItems_item.product.title }}, {%endfor%}
+{% for lineItems_item in order.lineItems %} name-{{lineItems_item.name}}, {% endfor %}
+
+{% for lineItems_item in order.lineItems %} {{lineItems_item.variantTitle}}, {% endfor %}
+
+{% for getProductData_item in getProductData %} {% for variants_item in getProductData_item.variants %} {{variants_item.displayName}}, {% endfor %}, {% endfor %}
+
+{% for li in order.lineItems %}{{ li.product.handle }},{% endfor %}
+
+{% for li in order.lineItems %}title-{{ li.product.title }},{% endfor %}
+
+{% for li in order.lineItems %}variant-{{ li.variantTitle }},{% endfor %}
+
+
+
+
+
+
+
+

@@ -117,3 +117,18 @@ la-mansio-half-pack - 0
     display: block;
     margin: 25px auto 15px;
 }
+11. Image in After before css
+.title_collapsed:after {
+    content: "";
+    width: 23px;
+    height: 17px;
+    position: absolute;
+    right: 15px;
+    top: 8px;
+    display: inline-block;
+    z-index: 14;
+    background-image: url(https://cdn.shopify.com/s/files/1/1126/1740/files/Mediamodifier-Design-Template_1.png?v=1725259026);
+    background-size: contain; /* Ensure the image scales correctly */
+    background-repeat: no-repeat; /* Ensure the image doesn’t repeat */
+    background-position: center; /* Center the image */
+}

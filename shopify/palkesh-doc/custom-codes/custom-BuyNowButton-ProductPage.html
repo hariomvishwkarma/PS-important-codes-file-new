@@ -1,3 +1,34 @@
+<button id="buy-now-button" class="btn">Buy Now</button>
+
+<script>
+  document.getElementById('buy-now-button').addEventListener('click', function() {
+    var productId = {{ product.selected_or_first_available_variant.id }};
+    var quantity = 1; // Replace this with the actual quantity or a dynamic value if needed
+
+    // Add the product to the cart
+    fetch('/cart/add.js', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            id: productId,
+            quantity: quantity
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Redirect to the checkout page
+        window.location.href = '/checkout';
+    })
+    .catch(error => {
+        console.error('Error adding to cart:', error);
+    });
+});
+</script>
+
+
+=============================================================================
 
 <form method="post" action="/cart/add" class="cus_form-p">
             <input type="hidden" name="return_to" value="/checkout/" />
