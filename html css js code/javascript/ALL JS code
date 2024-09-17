@@ -340,6 +340,7 @@ $(document).ready(function () {
 
 
 --------------------------------------------------------------------------------------------------------------------------
+20.
 Js read more read less 
 <style>
 span.readmore {
@@ -396,3 +397,19 @@ readLessButtons.forEach((button, index) => {
   });
 });
 </script> 
+-------------------------------------------------
+
+21. Add div with class name in window load.
+const container = document.querySelector('#mw-apo-app-block');
+const commonPsDiv = document.createElement('div');
+commonPsDiv.classList.add('common-ps');
+const swatchElements = container.querySelectorAll('.ps-option-Upholstery');
+
+// Insert the new div before the first swatch element
+const firstSwatchElement = swatchElements[0];
+firstSwatchElement.parentNode.insertBefore(commonPsDiv, firstSwatchElement);
+
+// Move each swatch element into the new div
+swatchElements.forEach(element => {
+    commonPsDiv.appendChild(element);
+});
