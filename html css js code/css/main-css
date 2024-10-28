@@ -132,3 +132,9 @@ la-mansio-half-pack - 0
     background-repeat: no-repeat; /* Ensure the image doesn’t repeat */
     background-position: center; /* Center the image */
 }
+
+
+
+12. shopify-accelerated-checkout-cart:not(:has(shopify-google-pay-button, shopify-apple-pay-button)) shop-pay-wallet-button {
+    width: 100% !important;
+}

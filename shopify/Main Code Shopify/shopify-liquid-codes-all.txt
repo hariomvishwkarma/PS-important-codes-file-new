@@ -44,6 +44,7 @@ Shopify liquid imp code
 40. shopify Search bar placeholder show opacity 1
 41. Variant metafeild show in variant 
 42. center content in header
+43. Code for Discount, discount price, discount percent.
 --------------------------------------------------------------------------------------------------------------------------
 
 1. metafeild code - {%- if product.metafields.custom.svg %}{{ product.metafields.custom.svg }} {% endif -%}
