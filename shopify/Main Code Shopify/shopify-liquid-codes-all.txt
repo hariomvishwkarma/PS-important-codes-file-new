@@ -45,6 +45,7 @@ Shopify liquid imp code
 41. Variant metafeild show in variant 
 42. center content in header
 43. Code for Discount, discount price, discount percent.
+44. Code for download product metafield file.
 --------------------------------------------------------------------------------------------------------------------------
 
 1. metafeild code - {%- if product.metafields.custom.svg %}{{ product.metafields.custom.svg }} {% endif -%}
@@ -712,3 +713,17 @@ And single ke liye
 {% assign discount = list-price | minus: seling-price | money %}
 {% assign discount-percent = list-price | minus: seling-price  | times:100 | divided_by:list-price %}
 <p class="var-save-ps">You Save:{{ discount-percent }}%({{ discount }})</p>
+
+======================================================================================================
+
+44. Code for download product metafield file.
+{% if block.settings.heading == "MÅTT OCH DETALJER" and product.metafields.custom.matt != blank %}
+        <a href="{{ product.metafields.custom.matt | file_url }}" 
+              download="{{ product.metafields.custom.matt | file_url | split: '/' | last | split: '?' | first }}">
+            {{ product.metafields.custom.matt | file_url | split: '/' | last | split: '?' | first }}
+        </a>
+{% endif %}
+
+
+mujhe yah puchh  tha ki 12 ko mera last he to salary kitni ot kab aayegi. 
+Or jo leave thi uska paymet bhi aayega ya nhi?
