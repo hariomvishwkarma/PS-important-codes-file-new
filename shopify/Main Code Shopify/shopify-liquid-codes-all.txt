@@ -724,6 +724,6 @@ And single ke liye
         </a>
 {% endif %}
 
+======================================================================================================
 
-mujhe yah puchh  tha ki 12 ko mera last he to salary kitni ot kab aayegi. 
-Or jo leave thi uska paymet bhi aayega ya nhi?
+
